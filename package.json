@@ -1,0 +1,21 @@
+{
+
+  "name": "rerun-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
+  },
+
+
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.7",
+    "novel-js": "^0.8.3",
+    "sequelize": "^6.21.3",
+    "sqlite3": "^5.0.11"
+  }
+}
