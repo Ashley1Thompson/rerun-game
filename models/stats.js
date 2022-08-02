@@ -2,8 +2,6 @@ const { INTEGER } = require('sequelize');
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Stats extends Model {}
-
 Stats.init(
   {
     id: {
