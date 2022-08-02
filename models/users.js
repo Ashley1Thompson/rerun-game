@@ -32,7 +32,7 @@ User.init(
         }
       },
     },
-    hashedPassword: {
+    password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
@@ -41,6 +41,31 @@ User.init(
       },
     },
   },
+  { 
+    itemOne: {
+      type: DataTypes.BOOLEAN,
+    },
+  },  
+  { 
+    itemTwo: {
+      type: DataTypes.BOOLEAN,
+    },
+  },  
+  { 
+    itemThree: {
+      type: DataTypes.BOOLEAN,
+    },
+  },  
+  { 
+    itemFour: {
+      type: DataTypes.BOOLEAN,
+    },
+  },  
+  { 
+    itemFive: {
+      type: DataTypes.BOOLEAN,
+    },
+  },  
   {
     sequelize,
     timestamps: false,
