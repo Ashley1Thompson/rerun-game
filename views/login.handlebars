@@ -13,35 +13,46 @@
                     type="button" role="tab" aria-controls="signup-tab-pane" aria-selected="false">Sign-Up</button>
             </li>
         </ul>
+
+        {{!-- login tab content--}}
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="login-tab-pane" role="tabpanel" aria-labelledby="login-tab"
-                tabindex="0">...</div>
+                tabindex="0">
+                {{!-- login form --}}
+                <form class="login-form">
+                    <div class="mb-3">
+                        <label for="loginUsername" class="form-label">Username</label>
+                        <input type="username" class="form-control" id="loginUsername">
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginPassword">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="loginBtn">Login</button>
+                </form>
+            </div>
+
+            {{!-- signup tab content --}}
             <div class="tab-pane fade" id="signup-tab-pane" role="tabpanel" aria-labelledby="signup-tab" tabindex="0">
-                ...</div>
+                {{!-- signup form --}}
+                <form class="signup-form">
+                    <div class="mb-3">
+                        <label for="signupEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="signupEmail" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We will not share your email with anyone. Promise.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="signupUsername" class="form-label">Username</label>
+                        <input type="username" class="form-control" id="signupUsername">
+                    </div>
+                    <div class="mb-3">
+                        <label for="signupPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="signupPassword">
+                    </div>                    
+                        <button type="submit" class="btn btn-primary" id="signUpBtn">Signup</button>                    
+                </form>
+            </div>
         </div>
 
     </div>
 </div>
-
-
-
-
-<form>
-    <div class="mb-3">
-        <label for="inputEmail" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Include your email if you are signing up for the first time.</div>
-    </div>
-    <div class="mb-3">
-        <label for="inputUsername" class="form-label">Username</label>
-        <input type="username" class="form-control" id="inputUsername">
-    </div>
-    <div class="mb-3">
-        <label for="inputPassword" class="form-label">Password</label>
-        <input type="password" class="form-control" id="inputPassword">
-    </div>
-    <div>
-        <button type="submit" class="btn btn-primary" id="loginBtn">Login</button>
-        <button type="submit" class="btn btn-primary" id="signUpBtn">Signup</button>
-    </div>
-</form>
