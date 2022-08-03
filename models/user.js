@@ -45,32 +45,29 @@ User.init(
 
       },
     },
-  },
-  { 
+  
+  
     itemOne: {
       type: DataTypes.BOOLEAN,
     },
-  },  
-  { 
+ 
     itemTwo: {
       type: DataTypes.BOOLEAN,
     },
-  },  
-  { 
+
     itemThree: {
       type: DataTypes.BOOLEAN,
     },
-  },  
-  { 
+
     itemFour: {
       type: DataTypes.BOOLEAN,
     },
-  },  
-  { 
+  
     itemFive: {
       type: DataTypes.BOOLEAN,
     },
-  },  
+  },
+ 
   {
     hooks: {
       async beforeCreate(newUserData) {
