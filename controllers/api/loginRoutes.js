@@ -4,8 +4,13 @@ const {User} = require('../../models');
 
 // The `/api/login` endpoint
 
-// get all user login info (not sure if we will need this)
+//Render login handlebar
 router.get('/', async (req, res) => {
+    res.render('login');
+  });
+
+// get all user login info (not sure if we will need this)
+router.get('/login', async (req, res) => {
     try {
         const userData = await User.findAll({
             //space for included models if needed

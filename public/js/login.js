@@ -15,7 +15,7 @@ const loginFormHandler = async (event) => {
         if (response.ok) {
             // If successful, redirect the browser to the game page 
             //May need to edit this code based on the game routing
-            document,location.replace('/profile');
+            document.location.replace('/game');
         } else {
             alert(response.statusText)
         }
