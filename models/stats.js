@@ -1,4 +1,4 @@
-const { INTEGER } = require('sequelize');
+// const { INTEGER } = require('sequelize');
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
@@ -8,17 +8,14 @@ Stats.init(
   {
     id: {
       type: DataTypes.INTEGER,
+      primaryKey: true,
       allowNull: false,
       autoIncrement: true,
     }
-  },
-
-  {  
+  ,
     bestRun: {
       type: DataTypes.TIME,
-      }
-  },
-  {
+      },
     userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -26,7 +23,6 @@ Stats.init(
         model: 'user',
         key: 'id',
       },
-      
     },
   },
 
