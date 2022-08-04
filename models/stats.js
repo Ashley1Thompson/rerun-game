@@ -17,6 +17,7 @@ Stats.init(
       type: DataTypes.TIME,
     },
 
+    
     username: {
       type: DataTypes.STRING,
       allowNull: false,

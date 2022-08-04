@@ -4,11 +4,17 @@ const {Stats, User} = require('../../models');
 
 // The `/api/leaderboard` endpoint
 
+
+router.get("/", async (req, res) => {
+    res.render("leaderboard");
+  });
+  
+
 // get all stats
-router.get('/', async (req, res) => {
+router.get('/data', async (req, res) => {
     //find all stats
     try {
-        const statsData = await Stats.findAll({
+        const statsDatan = await Stats.findAll({
             include: [{model: User}]
         });
 
@@ -18,12 +24,20 @@ router.get('/', async (req, res) => {
 
        // res.render("leaderboard", serializedStats);
 
-        res.status(200).json(statsData);
+        res.status(200).json(statsDatan);
+        console.log(statsDatan);
     }   catch (err) {
         res.status(500).json(err);
     }
 });
 
+
+  
+  
+
+  
+
+  
 
 module.exports = router;
 

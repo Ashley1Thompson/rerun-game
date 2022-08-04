@@ -1,20 +1,28 @@
 [
     {
-
+        
+        "userId": "4",
         "bestRun": "3:30",
-        "userId": "1"
+        "username": "Ayush"
+        
     },
     {
        
+        "userId": "3",
         "bestRun": "3:00",
-        "userId": "2"
+        "username": "Ashley"
+        
     },
-    {
+    {   
+        "userId": "1",
         "bestRun": "2:30",
-        "userId": "3"
+        "username": "Corbin"
+        
     },
-    {
+    {  
+        "userId": "2",
         "bestRun": "1:30",
-        "userId": "4"
+        "username": "Auggie"
+        
     }
 ]

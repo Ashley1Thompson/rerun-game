@@ -1,18 +1,13 @@
-<<<<<<< HEAD
 const router = require('express').Router();
 const apiRoutes = require('./api');
 const loginRoutes = require('./api/loginRoutes')
+const leaderboardRoutes = require('./api/leaderboardRoutes');
+const gameRoutes = require("./api/gameRoutes");
 
 router.use('/', loginRoutes);
 router.use('/api', apiRoutes);
-=======
-const router = require("express").Router();
-const apiRoutes = require("./api");
-const gameRoutes = require("./api/gameRoutes");
-
-router.use("/api", apiRoutes);
+router.use('/leaderboard',leaderboardRoutes);
 router.use("/game", gameRoutes);
->>>>>>> 4dba43872a6f0a5d3c2f3a86f45b57ec615ef748
 
 router.use((req, res) => {
   res.send("<h1>Wrong Route!</h1>");
