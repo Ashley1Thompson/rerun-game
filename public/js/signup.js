@@ -19,7 +19,7 @@ const signupFormHandler = async (event) => {
             //May need to edit this code based on the game routing
             document.location.replace('/game')
         } else {
-            alert(response.statusText);
+            alert('Please be sure to include an email, username, and password');
         }
     }
 };

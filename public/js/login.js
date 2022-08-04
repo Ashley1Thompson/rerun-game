@@ -18,7 +18,7 @@ const loginFormHandler = async (event) => {
             //May need to edit this code based on the game routing
             document.location.replace('/game');
         } else {
-            alert(response.statusText)
+            alert('Incorrect username or password. Please try again.')
         }
     }
 };
