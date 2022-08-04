@@ -11,11 +11,17 @@ Stats.init(
       primaryKey: true,
       allowNull: false,
       autoIncrement: true,
-    }
-  ,
+    },
+
     bestRun: {
       type: DataTypes.TIME,
-      },
+    },
+
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+
     userId: {
       type: DataTypes.INTEGER,
       allowNull: false,
