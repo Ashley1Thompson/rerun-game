@@ -9,8 +9,14 @@ router.get('/', async (req, res) => {
     res.render('login');
   });
 
-// get all user login info (not sure if we will need this)
-router.get('/login', async (req, res) => {
+  //Render signup handlebar
+router.get('/signup', async (req, res) => {
+    res.render('signup');
+  });
+
+
+// get all user login info (not sure if we will need this) ------------------------------------------
+router.get('/users', async (req, res) => {
     try {
         const userData = await User.findAll({
             //space for included models if needed
@@ -20,9 +26,10 @@ router.get('/login', async (req, res) => {
         res.status(500).json(err);
     }
 });
+//---------------------------------------------------------------------------------------------------
 
-// CREATE new user
-router.post('/', async (req, res) => {
+// CREATE new user (signup)
+router.post('/signup', async (req, res) => {
     try {
         const dbUserData = await User.create({
             username: req.body.username,
@@ -42,7 +49,7 @@ router.post('/', async (req, res) => {
 });
 
 // Login
-router.post('/login', async (req, res) => {
+router.post('/', async (req, res) => {
     try{
         const dbUserData = await User.findOne({
             where: {

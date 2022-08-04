@@ -12,12 +12,6 @@ Stats.init(
       allowNull: false,
       autoIncrement: true,
     },
-<<<<<<< HEAD
-   
-    bestRun: {
-      type: DataTypes.TIME,
-      },
-=======
 
     bestRun: {
       type: DataTypes.TIME,
@@ -27,7 +21,6 @@ Stats.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
->>>>>>> f594e1b08b233fd5330cd4d76836779c0c5c6a6d
 
     userId: {
       type: DataTypes.INTEGER,
