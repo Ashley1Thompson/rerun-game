@@ -2,8 +2,8 @@ const userData = require('./userData');
 const statsData = require('./statsData');
 const { User } = require('../models');
 const {Stats}  = require('../models');
-const userStats = require('./leaderboard');
-const seedStatistics = require('./leaderboardSeed');
+
+
 
 
 const sequelize = require('../config/connection');
@@ -24,7 +24,7 @@ const seedDatabase = async () => {
     return: true,
   });
 
-  await seedStatistics();
+ // await seedStatistics();
 
   console.log('\n----- STATS SEEDED -----\n');
 

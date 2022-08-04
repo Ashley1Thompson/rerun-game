@@ -8,15 +8,7 @@ const {Stats, User} = require('../../models');
 router.get("/", async (req, res) => {
     res.render("leaderboard");
   });
-
-
-  router.get('/leaderboard', function(req, res)
-  {
-    
-  res.render('username', {username: "Lee Vining"});
-  //res.render('bestRun', {bestRun: "5:00"})
-
-  })
+  
 
 // get all stats
 router.get('/data', async (req, res) => {
