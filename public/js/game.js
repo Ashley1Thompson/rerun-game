@@ -1,4 +1,44 @@
-// Assignations for copy elements to be revealed/hidden
+// let timer;
+// const startTime = 5; // in minutes
+// let time = startTime * 60; // in seconds
+// let formattedTime = time / 60;
+
+// // start button on-click:
+// function start() {
+//   timer = setInterval(updateTimer, 1000);
+//   updateTimer();
+//   // hide restart button while timer is running
+//   $("#playGameBtn").hide();
+// }
+// export { start };
+// // stop the clock
+// function stop() {
+//   clearInterval(timer);
+//   // return time left using time, helper fn to convert seconds into minutes and seconds.
+//   return formattedTime;
+// }
+// export { stop };
+
+// // The game ends when timer runs out, show restart button
+// function timesUp() {
+//   stop();
+
+//   $("#playGameBtn").show();
+// }
+
+// // handles countdown, calls timesUp to end game when no time left.
+// function updateTimer() {
+//   const minutes = Math.floor(time / 60);
+//   const seconds = time % 60;
+//   time--;
+//   if (time >= 0)
+//     document.getElementById("timer").innerHTML = `${minutes}:${seconds}`;
+//   else {
+//     timesUp();
+//   }
+// }
+
+// const sound = require("sound-play");
 const beginEl = document.querySelector(".begin");
 const atrium1El = document.querySelector(".atrium1");
 const engineering1El = document.querySelector(".engineering1");
@@ -79,28 +119,38 @@ atriumLsix.addEventListener("click", engineering6);
 engineeringLsix.addEventListener("click", science6Fail);
 engineeringRsix.addEventListener("click", science6Success);
 
+function testSound() {
+  sound.play("sounds/testSound.mp3");
+  console.log("done");
+}
+
 // Functions to move between "rooms"
 function beginGame() {
   beginEl.classList.add("hide");
   atrium1El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/atrium-1.png";
   // START TIMER HERE
+  start();
 }
 
 function engineering1() {
   atrium1El.classList.add("hide");
   engineering1El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/corridor-2.png";
 }
 
 function atrium1() {
   engineering1El.classList.add("hide");
   kitchen1El.classList.add("hide");
   atrium1El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/atrium-1.png";
 }
 function kitchen1() {
   atrium1El.classList.add("hide");
   command1El.classList.add("hide");
   command2El.classList.add("hide");
   kitchen1El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/kitchen-new.png";
 }
 
 function acknowledge() {
@@ -114,18 +164,21 @@ function acknowledge() {
 function command1() {
   kitchen1El.classList.add("hide");
   command1El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/command-room.png";
 }
 
 function botany2() {
   command1El.classList.add("hide");
   command2El.classList.add("hide");
   botany2El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/botany-room.png";
 }
 
 function command2() {
   botany2El.classList.add("hide");
   kitchen2El.classList.add("hide");
   command2El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/command-room.png";
 }
 
 function kitchen2() {
@@ -133,21 +186,25 @@ function kitchen2() {
   command2El.classList.add("hide");
   atrium2El.classList.add("hide");
   kitchen2El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/kitchen-new.png";
 }
 
 function atrium2() {
   kitchen2El.classList.add("hide");
   atrium2El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/atrium-1.png";
 }
 
 function engineering2() {
   atrium2El.classList.add("hide");
   engineering2El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/airlock-door.png";
 }
 
 function atrium3() {
   engineering2El.classList.add("hide");
   atrium3El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/atrium-1.png";
 }
 
 function atriumFail() {
@@ -159,6 +216,7 @@ function atriumFail() {
 function kitchen3() {
   atrium3El.classList.add("hide");
   kitchen3El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/kitchen-new.png";
 }
 
 function kitchenFail() {
@@ -170,6 +228,7 @@ function kitchenFail() {
 function command3() {
   kitchen3El.classList.add("hide");
   command3El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/command-room.png";
 }
 
 function commandFail() {
@@ -181,6 +240,7 @@ function commandFail() {
 function botany3() {
   command3El.classList.add("hide");
   botany3El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/botany-room.png";
 }
 
 function botanySuccess() {
@@ -193,26 +253,31 @@ function botanySuccess() {
 function command4() {
   botany3El.classList.add("hide");
   command4El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/command-room.png";
 }
 
 function kitchen4() {
   command4El.classList.add("hide");
   kitchen4El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/kitchen-new.png";
 }
 
 function atrium4() {
   kitchen4El.classList.add("hide");
   atrium4El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/atrium-1.png";
 }
 
 function engineering4() {
   atrium4El.classList.add("hide");
   engineering4El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/engineering-new.png";
 }
 
 function science4() {
   engineering4El.classList.add("hide");
   science4El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/science-bay-light.png";
 }
 
 function engineeringFailTwo() {
@@ -224,21 +289,25 @@ function engineeringFailTwo() {
 function engineering5() {
   science4El.classList.add("hide");
   engineering5El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/engineering-new.png";
 }
 
 function atrium5() {
   engineering5El.classList.add("hide");
   atrium5El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/atrium-1.png";
 }
 
 function atriumFailTwo() {
   document.getElementById("atriumSearchTwo").innerText =
     "I mean, you can't really be that surprised, right? No dice. The clock ticks down ...";
+  // DECREMENT TIMER BY 30 SECONDS
 }
 
 function kitchen5() {
   atrium5El.classList.add("hide");
   kitchen5El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/kitchen-new.png";
 }
 
 function kitchenSuccess() {
@@ -252,18 +321,20 @@ function kitchenSuccess() {
 function kitchenSnackSuccess() {
   document.getElementById("kitchenSearchTwo").innerText =
     "You hurriedly chug some banana milk ... and suddenly you feel just a bit better! That little pick me up has helped you move faster!";
-  // ADD 30 SECONDS TO CLOCK
   kitchenHiddenThreeEl.classList.add("hide");
+  // ADD 15 SECONDS TO CLOCK
 }
 
 function atrium6() {
   kitchen5El.classList.add("hide");
   atrium6El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/atrium-1.png";
 }
 
 function engineering6() {
   atrium6El.classList.add("hide");
   engineering6El.classList.remove("hide");
+  document.getElementById("spaceShipImg").src = "images/engineering-new.png";
 }
 
 function science6Fail() {

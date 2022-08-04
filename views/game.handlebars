@@ -1,24 +1,21 @@
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RERUN</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-  <link rel="stylesheet" href="../public/css/style.css"> 
-</head>
-<body>
-  <main class="container-fluid ">
+<body class="backgroundImg">
+  <main class="container-fluid">
     <div class="row mb-2 d-flex justify-content-center">
-      <div class="col-12 col-md-6 border border-5 mx-5 vh-25">
+      <div class="col-10 col-md-10 col-lg-6 bg-light border border-5 m-5">
+        <h1 id="timer">Prepare Yourself ...</h1>
+      </div>
+    </div> 
+    <div class="row mb-2 d-flex justify-content-center" id="primaryRow">
+      <div class="col-10 col-md-10 col-lg-5 bg-light border border-5 m-5">
         <div class="begin">  
           <h1>LIVING QUARTERS</h1>
           <p>
-            You wake up on the floor of your living quarters, alarm sirens blaring. Stumbling up to your feet you see the tablet on your desk, informing you that one of the test vials in the science bay has become compromised. You can’t recall where you were before you ended up here, but that appears to be the least of your problems. You’re going to need to make it to that lab to repair the test vial, but according to the readouts you’re seeing the air contamination will render you unconscious within 5 minutes of you leaving the safety of your quarters. Now, time to go repair that vial! You set a 5:00 timer on your watch, press the biometric reader on the side of your door and head out into the hallway.
+            You wake up on the floor of your living quarters, alarm sirens blaring. Stumbling up to your feet you see the tablet on your desk, informing you that one of the test vials in the science bay has become compromised. You can’t recall where you were before you ended up here, but that appears to be the least of your problems. You’re going to need to make it to that lab to repair the test vial, but according to the readouts you’re seeing the air contamination will render you unconscious within 5 minutes of you leaving the safety of your quarters. Now, time to go repair that vial!</br> You set a 5:00 timer on your watch, press the biometric reader on the side of your door and head out into the hallway.
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="beginLone">Exit Living Quarters</button>
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="beginRone">Exit Living Quarters, but with swagger</button>
+            <div class="col-12 mx-5 d-flex justify-content-between">
+              <button class="bg-dark text-success rounded" id="beginLone">Exit Living Quarters</button>
+              <button class="bg-dark text-success rounded" id="beginRone">Exit Living Quarters, but with swagger</button>
             </div>  
           </div>
         </div>
@@ -28,9 +25,9 @@
             The normally peaceful hallways are chaotic with flashing lights and sirens from all directions—it does seem like a bit much for a non-lethal issue. Still, you’re not looking forward to being rendered unconscious again, so you’re keen on getting back to the Science Bay as quickly as possible. Unfortunately, you’re still feeling a bit groggy, and you’re having a bit of trouble remembering the ship’s layout …              
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="atriumLone">Head toward Engineering</button>
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="atriumRone">Head toward Kitchen</button>
+            <div class="col-12 mx-5 d-flex justify-content-between">
+              <button class="bg-dark text-success rounded" id="atriumLone">Head toward Engineering</button>
+              <button class="bg-dark text-success rounded" id="atriumRone">Head toward Kitchen</button>
             </div>  
           </div>
         </div>
@@ -40,8 +37,8 @@
             The following message appears on the panel beside the door: “Access to this area is denied until alarms have been manually acknowledged.”
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="engineeringLone">Return to the Atrium</button>
+            <div class="col-12 mx-5 d-flex justify-content-center">
+              <button class="bg-dark text-success rounded mb-auto" id="engineeringLone">Return to the Atrium</button>
             </div>  
           </div>
         </div>
@@ -51,9 +48,9 @@
             In the kitchen, you see the mess you must have left behind in a bout of sleep-walking the night before. You’ll have to clean this up, but there’s a bigger mess to deal with at the moment …         
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="kitchenLone">Return to the Atrium</button>
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="kitchenRone">Head toward the Command Center</button>
+            <div class="col-12 mx-5 d-flex justify-content-between">
+              <button class="bg-dark text-success rounded" id="kitchenLone">Return to the Atrium</button>
+              <button class="bg-dark text-success rounded" id="kitchenRone">Head toward the Command Center</button>
             </div>  
           </div>
         </div>
@@ -63,10 +60,10 @@
             The control terminals, usually a calming shade of green, are currently neon red. Awash in flashing lights, you make your way over to the panel marked “ACKNOWLEDGE: CONTAMINATION ALERT IN SCIENCE BAY.” 
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2 commandShown" id="acknowledgeLone">SMASH THAT ACKNOWLEDGE BUTTON</button>
-              <button class="bg-dark text-success rounded mt-2 mx-2 hide commandHiddenOne" id="commandLone">Head toward Botany Lab</button>
-              <button class="bg-dark text-success rounded mt-2 mx-2 hide commandHiddenTwo" id="commandRone">Head toward Kitchen</button>
+            <div class="col-12 mx-5 d-flex justify-content-between">
+              <button class="bg-dark text-success rounded commandShown" id="acknowledgeLone">SMASH THAT ACKNOWLEDGE BUTTON</button>
+              <button class="bg-dark text-success rounded hide commandHiddenOne" id="commandLone">Head toward Botany Lab</button>
+              <button class="bg-dark text-success rounded hide commandHiddenTwo" id="commandRone">Head toward Kitchen</button>
             </div>  
           </div>
         </div>
@@ -76,8 +73,8 @@
             The welcome petrichor scent of the botany lab helps to calm your senses. That is, until you remember that the air you’re breathing is still contaminated. Maybe it wasn’t worth it to stop and smell the roses …
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="botanyLtwo">Head back to Command Center</button>
+            <div class="col-12 mx-5 d-flex justify-content-center">
+              <button class="bg-dark text-success rounded" id="botanyLtwo">Head back to Command Center</button>
             </div>  
           </div>
         </div>
@@ -87,9 +84,9 @@
             The flashing lights have returned to normal, but the glow from the terminals still floods the room with a red glow.
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="commandLtwo">Head back to Botany Lab</button>
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="commandRtwo">Head toward Kitchen</button>
+            <div class="col-12 mx-5 d-flex justify-content-between">
+              <button class="bg-dark text-success rounded" id="commandLtwo">Head back to Botany Lab</button>
+              <button class="bg-dark text-success rounded" id="commandRtwo">Head toward Kitchen</button>
             </div>  
           </div>
         </div>
@@ -99,9 +96,9 @@
             In the kitchen, you see the mess you must have left behind in a bout of sleep-walking the night before. You’ll have to clean this up, but there’s a bigger mess to deal with at the moment …         
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="kitchenLtwo">Head toward the Atrium</button>
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="kitchenRtwo">Head back to the Command Center</button>
+            <div class="col-12 mx-5 d-flex justify-content-between">
+              <button class="bg-dark text-success rounded" id="kitchenLtwo">Head toward the Atrium</button>
+              <button class="bg-dark text-success rounded" id="kitchenRtwo">Head back to the Command Center</button>
             </div>  
           </div>
         </div>
@@ -111,9 +108,9 @@
             You never notice just how messy this place is until an emergency arises. Your belongings are strewn about, and you pause to reflect on how, even living in isolation, you’re a pretty messy person …
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="atriumLtwo">Head toward the Kitchen</button>
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="atriumRtwo">Head toward Engineering</button>
+            <div class="col-12 mx-5 d-flex justify-content-between">
+              <button class="bg-dark text-success rounded" id="atriumLtwo">Head toward the Kitchen</button>
+              <button class="bg-dark text-success rounded" id="atriumRtwo">Head toward Engineering</button>
             </div>  
           </div>
         </div>
@@ -123,8 +120,8 @@
             The panel accepts your handprint, and as you walk in you see the door to the Science Bay. You stride toward it confidently, and reach into your left pocket for your ID badge. Then you reach into your right pocket. Then your left pocket again. You look above the door to the handmade sign you put up your first week here: “No shirt, no shoes, no id badge … no entry.” 
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="engineeringLtwo">Hang your head in shame, then head back toward the Atrium</button>
+            <div class="col-12 mx-5 d-flex justify-content-center">
+              <button class="bg-dark text-success rounded" id="engineeringLtwo">Hang your head in shame, then head back toward the Atrium</button>
             </div>  
           </div>
         </div>
@@ -134,9 +131,9 @@
             Right about now you're wishing you had been just a liiitle bit tidier in your time here ...
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="atriumLthree">Search the Atrium for your ID badge</button>
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="atriumRthree">Head toward the Kitchen</button>
+            <div class="col-12 mx-5 d-flex justify-content-between">
+              <button class="bg-dark text-success rounded" id="atriumLthree">Search the Atrium for your ID badge</button>
+              <button class="bg-dark text-success rounded" id="atriumRthree">Head toward the Kitchen</button>
             </div>  
           </div>
         </div>
@@ -146,9 +143,9 @@
             Oof, this place is a wreck, there is food everywhere ...
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="kitchenLthree">Search the Kitchen for your ID badge</button>
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="kitchenRthree">Head toward the Command Center</button>
+            <div class="col-12 mx-5 d-flex justify-content-between">
+              <button class="bg-dark text-success rounded" id="kitchenLthree">Search the Kitchen for your ID badge</button>
+              <button class="bg-dark text-success rounded" id="kitchenRthree">Head toward the Command Center</button>
             </div>  
           </div>
         </div>
@@ -158,9 +155,9 @@
             The flashing lights have returned to normal, but the glow from the terminals still flood the room with a red glow.
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="commandLthree">Search the Command Center for your ID badge</button>
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="commandRthree">Head toward the Botany Lab</button>
+            <div class="col-12 mx-5 d-flex justify-content-between">
+              <button class="bg-dark text-success rounded" id="commandLthree">Search the Command Center for your ID badge</button>
+              <button class="bg-dark text-success rounded" id="commandRthree">Head toward the Botany Lab</button>
             </div>  
           </div>
         </div>
@@ -170,9 +167,9 @@
             The welcome petrichor scent of the botany lab helps to calm your senses. That is, until you remember that the air you’re breathing is still contaminated. Maybe it wasn’t worth it to stop and smell the roses …
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2 botanyHiddenOne" id="botanyLthree">Welp, nowhere else it could be ... search the Botany Lab for your ID badge</button>
-              <button class="bg-dark text-success rounded mt-2 mx-2 botanyHiddenTwo hide" id="botanyRthree">Head toward the Command Center</button>
+            <div class="col-12 mx-5 d-flex justify-content-center">
+              <button class="bg-dark text-success rounded botanyHiddenOne" id="botanyLthree">Welp, nowhere else it could be ... search the Botany Lab for your ID badge</button>
+              <button class="bg-dark text-success rounded botanyHiddenTwo hide" id="botanyRthree">Head toward the Command Center</button>
             </div>  
           </div>
         </div>
@@ -182,8 +179,8 @@
             No time to look around now, you're on a mission!
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="commandLfour">You gotta get to Engineering! Back to the Kitchen!</button>
+            <div class="col-12 mx-5 d-flex justify-content-center">
+              <button class="bg-dark text-success rounded" id="commandLfour">You gotta get to Engineering! Back to the Kitchen!</button>
             </div>  
           </div>
         </div>
@@ -193,8 +190,8 @@
             Maybe time for a snack? No, no, gotta get back to Engineering!.
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="kitchenLfour">Onward! To the Atrium!</button>
+            <div class="col-12 mx-5 d-flex justify-content-center">
+              <button class="bg-dark text-success rounded" id="kitchenLfour">Onward! To the Atrium!</button>
             </div>  
           </div>
         </div>
@@ -204,8 +201,8 @@
             Ugh, feeling kinda tired, and that couch is looking mighty tempting ... stay strong!
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="atriumLfour">To Engineering! Go, go, go!</button>
+            <div class="col-12 mx-5 d-flex justify-content-center">
+              <button class="bg-dark text-success rounded" id="atriumLfour">To Engineering! Go, go, go!</button>
             </div>  
           </div>
         </div>
@@ -215,8 +212,8 @@
             With your trusty ID badge in hand you—again—stride confidently toward the door. This time, however, you successfully swipe your badge, and are finally able to head into the Science Bay. 
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="engineeringLfour">Finally, to the Science Bay!</button>
+            <div class="col-12 mx-5 d-flex justify-content-center">
+              <button class="bg-dark text-success rounded" id="engineeringLfour">Finally, to the Science Bay!</button>
             </div>  
           </div>
         </div>
@@ -227,8 +224,8 @@
             You’re going to need to find something to patch up this crack, and quickly!
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="scienceLfour">Once again, to Engineering!</button>
+            <div class="col-12 mx-5 d-flex justify-content-center">
+              <button class="bg-dark text-success rounded" id="scienceLfour">Once again, to Engineering!</button>
             </div>  
           </div>
         </div>
@@ -238,9 +235,9 @@
             You realize just how many buttons and panels there are in this room! You still haven’t memorized what each one of them does, but thankfully Dr. Jung left you comprehensive manuals to refer back to.
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="engineeringLfive">Look through the manuals</button>
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="engineeringRfive">Head toward the Atrium</button>
+            <div class="col-12 mx-5 d-flex justify-content-between">
+              <button class="bg-dark text-success rounded" id="engineeringLfive">Look through the manuals</button>
+              <button class="bg-dark text-success rounded" id="engineeringRfive">Head toward the Atrium</button>
             </div>  
           </div>
         </div>
@@ -250,9 +247,9 @@
             You're fairly certain at a glance that there's nothing helpful in this mess ... but then again, you're getting kinda woozy ...
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="atriumLfive">Scour the Atrium</button>
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="atriumRfive">Head toward the Kitchen</button>
+            <div class="col-12 mx-5 d-flex justify-content-between">
+              <button class="bg-dark text-success rounded" id="atriumLfive">Scour the Atrium</button>
+              <button class="bg-dark text-success rounded" id="atriumRfive">Head toward the Kitchen</button>
             </div>  
           </div>
         </div>
@@ -262,10 +259,10 @@
             Finally taking in your surroundings in the kitchen, it would appear that—in addition to the sleep-walking (a common happening among solo scientists on research vessels)—you've taken up sleep-eating ...
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2 kitchenHiddenOne" id="kitchenLfive">Search the kitchen like your consciousness depends on it!</button>
-              <button class="bg-dark text-success rounded mt-2 mx-2 kitchenHiddenTwo hide" id="kitchenRfive">Make your way back to the Atrium</button>
-              <button class="bg-dark text-success rounded mt-2 mx-2 kitchenHiddenThree hide" id="kitchenSnack">Maybe just a quick snack ...</button>
+            <div class="col-12 mx-5 d-flex justify-content-between">
+              <button class="bg-dark text-success rounded kitchenHiddenOne" id="kitchenLfive">Search the kitchen like your consciousness depends on it!</button>
+              <button class="bg-dark text-success rounded kitchenHiddenTwo hide" id="kitchenRfive">Make your way back to the Atrium</button>
+              <button class="bg-dark text-success rounded kitchenHiddenThree hide" id="kitchenSnack">Maybe just a quick snack ...</button>
             </div>  
           </div>
         </div>
@@ -275,8 +272,8 @@
             You begin to wonder if the atrium has gotten ... blurrier ... since you last saw it ...
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="atriumLsix">Almost there ... head toward Engineering</button>
+            <div class="col-12 mx-5 d-flex justify-content-center">
+              <button class="bg-dark text-success rounded" id="atriumLsix">Almost there ... head toward Engineering</button>
             </div>  
           </div>
         </div>
@@ -286,9 +283,9 @@
             You could have sworn there was only one door into the Science Bay, but now you're seeing two ...
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2 engineeringWall" id="engineeringLsix">Choose the door on your left ...</button>
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="engineeringRsix">Choose the door on your right ...</button>
+            <div class="col-12 mx-5 d-flex justify-content-between">
+              <button class="bg-dark text-success rounded engineeringWall" id="engineeringLsix">Choose the door on your left ...</button>
+              <button class="bg-dark text-success rounded" id="engineeringRsix">Choose the door on your right ...</button>
             </div>  
           </div>
         </div>
@@ -300,12 +297,16 @@
             CONGRATULATIONS!
           </p>
           <div class="row mb-2 d-flex justify-content-center">
-            <div class="col-12 col-md-6 mx-5 d-flex justify-content-between">
-              <button class="bg-dark text-success rounded mt-2 mx-2" id="leaderboard">You've made it! Immortalize your name in the great list of those who have succeeded!</button>
+            <div class="col-12 mx-5 d-flex justify-content-between">
+              <button class="bg-dark text-success rounded" id="">You've made it! Immortalize your name in the great list of those who have succeeded!</button>
             </div>  
           </div>
         </div>
+      </div>
+    <div class="col-10 col-md-10 col-lg-5 m-5" style="height: 375px; width: 375px;">
+      <img id="spaceShipImg" src="images/title-page.png" width="375px" height="375px">
     </div>
+  </div>
   </main>
-  <script src="../public/js/game.js></script>
+  <script src="js/game.js"></script>
 </body>
