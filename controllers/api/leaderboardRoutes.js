@@ -24,6 +24,11 @@ router.get('/', async (req, res) => {
     }
 });
 
+router.get('/leaderboard', async (req, res) => {
+    res.render('leaderboard');
+  });
+
+
 
 module.exports = router;
 

@@ -2,19 +2,19 @@
     {
 
         "bestRun": "3:30",
-        "userId": "1"
+        "username": "1"
     },
     {
        
         "bestRun": "3:00",
-        "userId": "2"
+        "username": "2"
     },
     {
         "bestRun": "2:30",
-        "userId": "3"
+        "username": "3"
     },
     {
         "bestRun": "1:30",
-        "userId": "4"
+        "username": "4"
     }
 ]
