@@ -1,29 +1,32 @@
-const { Stats } = require("../../models");
 
-const statDataHandler = async (event) => {
+ const statDataHandler = async(event) => {
     event.preventDefault();
-    const response = await fetch('/api/leaderboard/data', {
+    const response = await fetch('http://localhost:3001/api/leaderboard/data', {
         method: 'GET',
-        body: JSON.parse({username, bestRun}),
-    });
+    }).then((response) => response.json())
+    .then((data) =>  console.log(data));
 
 
-    if(response.ok){
-     console.log(response);
-     
-
+    if(data){
+        
+     //grab the Username and the bestRun in the data
+       //for loop for the grabbing of the relevant
+     return data;
     
-    }
 }
+else {
 
+  return null;  
+}
+};
 
+async function dataFix(data){
 
+return data;
 
- async function addToLead (sampleInp) {
-
-document.querySelector('#List').appendChild(sampleInp);
-
+   
 };
 
 
-document.addEventListener('load',statDataHandler);
+
+window.addEventListener('load',statDataHandler);
