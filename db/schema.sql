@@ -1,5 +1,5 @@
-
 DROP DATABASE IF EXISTS rerunGame_db;
 
 CREATE DATABASE rerunGame_db;
+
 

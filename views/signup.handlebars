@@ -1,0 +1,60 @@
+<div class="card">
+    <div class="card-header">
+        Login/ Signup
+    </div>
+    <div class="card-body">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link " id="login-tab" data-bs-toggle="tab" data-bs-target="#login-tab-pane"
+                    type="button" role="tab" aria-controls="login-tab-pane" aria-selected="true">Login</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="signup-tab" data-bs-toggle="tab" data-bs-target="#signup-tab-pane"
+                    type="button" role="tab" aria-controls="signup-tab-pane" aria-selected="false">Sign-Up</button>
+            </li>
+        </ul>
+
+        {{!-- login tab content--}}
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade " id="login-tab-pane" role="tabpanel" aria-labelledby="login-tab"
+                tabindex="0">
+                {{!-- login form --}}
+                <form class="login-form">
+                    <div class="mb-3">
+                        <label for="loginUsername" class="form-label">Username</label>
+                        <input type="username" class="form-control" id="loginUsername">
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginPassword">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="loginBtn">Login</button>
+                </form>
+            </div>
+
+            {{!-- signup tab content --}}
+            <div class="tab-pane fade show active" id="signup-tab-pane" role="tabpanel" aria-labelledby="signup-tab" tabindex="0">
+                {{!-- signup form --}}
+                <form class="signup-form">
+                    <div class="mb-3">
+                        <label for="signupEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="signupEmail" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We will not share your email with anyone. Promise.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="signupUsername" class="form-label">Username</label>
+                        <input type="username" class="form-control" id="signupUsername">
+                    </div>
+                    <div class="mb-3">
+                        <label for="signupPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="signupPassword">
+                    </div>                    
+                        <button type="submit" class="btn btn-primary" id="signUpBtn">Signup</button>                    
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="js/signup.js"></script>
