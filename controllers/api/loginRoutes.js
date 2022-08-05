@@ -4,8 +4,19 @@ const {User} = require('../../models');
 
 // The `/api/login` endpoint
 
-// get all user login info (not sure if we will need this)
+//Render login handlebar
 router.get('/', async (req, res) => {
+    res.render('login');
+  });
+
+  //Render signup handlebar
+router.get('/signup', async (req, res) => {
+    res.render('signup');
+  });
+
+
+// get all user login info (not sure if we will need this) ------------------------------------------
+router.get('/users', async (req, res) => {
     try {
         const userData = await User.findAll({
             //space for included models if needed
@@ -15,9 +26,10 @@ router.get('/', async (req, res) => {
         res.status(500).json(err);
     }
 });
+//---------------------------------------------------------------------------------------------------
 
-// CREATE new user
-router.post('/', async (req, res) => {
+// CREATE new user (signup)
+router.post('/signup', async (req, res) => {
     try {
         const dbUserData = await User.create({
             username: req.body.username,
@@ -37,7 +49,7 @@ router.post('/', async (req, res) => {
 });
 
 // Login
-router.post('/login', async (req, res) => {
+router.post('/', async (req, res) => {
     try{
         const dbUserData = await User.findOne({
             where: {
@@ -78,6 +90,14 @@ router.post('/login', async (req, res) => {
 });
 
 // Logout
-
+router.post('/logout', (req, res) => {
+    if (req.session.loggedIn) {
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+    } else {
+      res.status(404).end();
+    }
+  });
 
 module.exports = router;

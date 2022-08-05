@@ -526,3 +526,31 @@ function science6Success() {
   // STOP TIMER
   stop()
 }
+
+//function to send score to stats table and restart the game
+const scoreHandler = async (event) => {
+  event.preventDefault();
+
+
+
+  //need to determine an if conditional for the end of game/timer
+  if (formattedTime > 0) {
+    const response = await fetch('/api/game', {
+      method: 'POST',
+      body: JSON.stringify({ formattedTime }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      document.location.replace('/game');
+    } else {
+      alert('Failed to save score...');
+    }
+  }
+};
+
+document
+  .querySelector('#play-again')
+  .addEventListener('click', scoreHandler);

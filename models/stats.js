@@ -21,16 +21,21 @@ Stats.init(
     username: {
       type: DataTypes.STRING,
       allowNull: false,
+      references: {
+            model: 'user',
+            key: 'username',
+          },
     },
 
-    userId: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
-    },
+    // userId: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   references: {
+    //     model: 'user',
+    //     key: 'id',
+    //   },
+      
+    // },
   },
 
   {
