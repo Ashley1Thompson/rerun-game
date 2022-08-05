@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const {Stats} = require("../../models");
-const withAuth = require('../utils/auth');
+const withAuth = require('../../utils/auth');
 
 //Render game handlebar
 router.get("/", async (req, res) => {
