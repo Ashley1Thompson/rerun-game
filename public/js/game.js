@@ -1,42 +1,7 @@
-// let timer;
-// const startTime = 5; // in minutes
-// let time = startTime * 60; // in seconds
-// let formattedTime = time / 60;
-
-// // start button on-click:
-// function start() {
-//   timer = setInterval(updateTimer, 1000);
-//   updateTimer();
-//   // hide restart button while timer is running
-//   $("#playGameBtn").hide();
-// }
-// export { start };
-// // stop the clock
-// function stop() {
-//   clearInterval(timer);
-//   // return time left using time, helper fn to convert seconds into minutes and seconds.
-//   return formattedTime;
-// }
-// export { stop };
-
-// // The game ends when timer runs out, show restart button
-// function timesUp() {
-//   stop();
-
-//   $("#playGameBtn").show();
-// }
-
-// // handles countdown, calls timesUp to end game when no time left.
-// function updateTimer() {
-//   const minutes = Math.floor(time / 60);
-//   const seconds = time % 60;
-//   time--;
-//   if (time >= 0)
-//     document.getElementById("timer").innerHTML = `${minutes}:${seconds}`;
-//   else {
-//     timesUp();
-//   }
-// }
+let timer;
+const startTime = 5; // in minutes
+let time = startTime * 60; // in seconds
+let formattedTime = time / 60;
 
 // const sound = require("sound-play");
 const beginEl = document.querySelector(".begin");
@@ -122,6 +87,46 @@ engineeringRsix.addEventListener("click", science6Success);
 function testSound() {
   sound.play("sounds/testSound.mp3");
   console.log("done");
+}
+
+// start button on-click:
+function start() {
+  timer = setInterval(updateTimer, 1000);
+  updateTimer();
+}
+
+// stop the clock
+function stop() {
+  clearInterval(timer);
+  // return time left using time, helper fn to convert seconds into minutes and seconds.
+  return formattedTime;
+}
+
+// The game ends when timer runs out, refresh browser
+function timesUp() {
+  window.location.reload();
+}
+
+// handles countdown, calls timesUp to end game when no time left.
+function updateTimer() {
+  const minutes = Math.floor(time / 60);
+  const seconds = time % 60;
+
+  time--;
+  if (time >= -1)
+    document.getElementById("timer").innerHTML = `${minutes}:${seconds}`;
+  else {
+    timesUp();
+
+  }
+}
+
+function subtractTime() {
+  time -= 30 //seconds;
+}
+
+function addTime() {
+  time += 15 //seconds;
 }
 
 // Functions to move between "rooms"
@@ -211,6 +216,7 @@ function atriumFail() {
   document.getElementById("atriumSearch").innerText =
     "No badge here ... but at least you know where it isn't! Unfortunately, you have lost some precious seconds.";
   // DECREMENT TIMER BY 30 SECONDS
+  subtractTime()
 }
 
 function kitchen3() {
@@ -223,6 +229,7 @@ function kitchenFail() {
   document.getElementById("kitchenSearch").innerText =
     "No badge here ... but you notice that you ate your leftover sushi from Wednesday while sleep-walking. Bummer, you were hoping to have that for dinner. You have lost some precious seconds.";
   // DECREMENT TIMER BY 30 SECONDS
+  subtractTime();
 }
 
 function command3() {
@@ -235,6 +242,7 @@ function commandFail() {
   document.getElementById("commandSearch").innerText =
     "You had hoped that the glow from the terminals might help you catch a glint off the reflective sheen on your ID badge, but no such luck, looks like it isn't here. You have lost some precious seconds.";
   // DECREMENT TIMER BY 30 SECONDS
+  subtractTime();
 }
 
 function botany3() {
@@ -284,6 +292,7 @@ function engineeringFailTwo() {
   document.getElementById("engineeringSearchTwo").innerText =
     "The only thing sticky in here is the knowledge that Dr. Jung has bestowed upon you ... the clock ticks down ...";
   // DECREMENT TIMER BY 30 SECONDS
+  subtractTime();
 }
 
 function engineering5() {
@@ -302,6 +311,7 @@ function atriumFailTwo() {
   document.getElementById("atriumSearchTwo").innerText =
     "I mean, you can't really be that surprised, right? No dice. The clock ticks down ...";
   // DECREMENT TIMER BY 30 SECONDS
+  subtractTime();
 }
 
 function kitchen5() {
@@ -323,6 +333,7 @@ function kitchenSnackSuccess() {
     "You hurriedly chug some banana milk ... and suddenly you feel just a bit better! That little pick me up has helped you move faster!";
   kitchenHiddenThreeEl.classList.add("hide");
   // ADD 15 SECONDS TO CLOCK
+  addTime()
 }
 
 function atrium6() {
@@ -347,4 +358,5 @@ function science6Success() {
   engineering6El.classList.add("hide");
   finaleEl.classList.remove("hide");
   // STOP TIMER
+  stop()
 }
