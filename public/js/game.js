@@ -361,19 +361,17 @@ function science6Success() {
   stop()
 }
 
-//code to send score to stats table. can relocate later
-
+//function to send score to stats table and restart the game
 const scoreHandler = async (event) => {
   event.preventDefault();
 
-  //access timer value. will need to update once timer is built out***********
-  const time = [];
+
 
   //need to determine an if conditional for the end of game/timer
-  if (time) {
+  if (formattedTime > 0) {
     const response = await fetch('/api/game', {
       method: 'POST',
-      body: JSON.stringify({ time }),
+      body: JSON.stringify({ formattedTime }),
       headers: {
         'Content-Type': 'application/json',
       },

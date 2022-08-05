@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const {Stats} = require("../../models");
+const withAuth = require('../utils/auth');
 
 //Render game handlebar
 router.get("/", async (req, res) => {
@@ -10,7 +11,7 @@ router.get("/", async (req, res) => {
 router.post('/', withAuth, async (req, res) => {
   try{
     const newStat = await Stats.create({
-      ...req.body,
+      bestRun: req.body,
       username: req.session.username,
     });
 
