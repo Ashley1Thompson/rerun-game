@@ -196,7 +196,7 @@ function start() {
 function stop() {
   clearInterval(timer);
   // return time left using time, helper fn to convert seconds into minutes and seconds.
-  return formattedTime;
+  return formatTime();
 }
 
 // The game ends when timer runs out, refresh browser
@@ -226,12 +226,17 @@ function addTime() {
   time += 15 //seconds;
 }
 
+function formatTime() {
+  
+}
+
 // Functions to move between "rooms"
 function beginGame() {
   beginEl.classList.add("hide");
   atrium1El.classList.remove("hide");
   document.getElementById("spaceShipImg").src = "images/atrium-1.png";
   // START TIMER HERE
+  start()
   smallDoor();
   droningThrumOn();
 }
