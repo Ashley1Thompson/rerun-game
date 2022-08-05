@@ -348,3 +348,33 @@ function science6Success() {
   finaleEl.classList.remove("hide");
   // STOP TIMER
 }
+
+//code to send score to stats table. can relocate later
+
+const scoreHandler = async (event) => {
+  event.preventDefault();
+
+  //access timer value. will need to update once timer is built out***********
+  const time = [];
+
+  //need to determine an if conditional for the end of game/timer
+  if (time) {
+    const response = await fetch('/api/game', {
+      method: 'POST',
+      body: JSON.stringify({ time }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      document.location.replace('/game');
+    } else {
+      alert('Failed to save score...');
+    }
+  }
+};
+
+document
+  .querySelector('#play-again')
+  .addEventListener('click', scoreHandler);
