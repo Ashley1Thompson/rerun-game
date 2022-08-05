@@ -227,8 +227,10 @@ function addTime() {
 }
 
 function formatTime() {
-  
-}
+    let formatTime = time * 60;
+    let formattedTime = 300 - formatTime / 60;
+    return formattedTime
+  }
 
 // Functions to move between "rooms"
 function beginGame() {
