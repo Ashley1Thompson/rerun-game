@@ -44,7 +44,11 @@ p {
   }
 
   img {
-    max-width: 350px;
-    max-height: 350px;
+    max-width: 330px;
+    max-height: 330px;
+  }
+
+  nav a {
+    font-size: small;
   }
 }
