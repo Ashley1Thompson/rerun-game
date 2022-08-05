@@ -196,7 +196,7 @@ function start() {
 function stop() {
   clearInterval(timer);
   // return time left using time, helper fn to convert seconds into minutes and seconds.
-  return formattedTime;
+  return formatTime();
 }
 
 // The game ends when timer runs out, refresh browser
@@ -226,12 +226,19 @@ function addTime() {
   time += 15 //seconds;
 }
 
+function formatTime() {
+    let formatTime = time * 60;
+    let formattedTime = 300 - formatTime / 60;
+    return formattedTime
+  }
+
 // Functions to move between "rooms"
 function beginGame() {
   beginEl.classList.add("hide");
   atrium1El.classList.remove("hide");
   document.getElementById("spaceShipImg").src = "images/atrium-1.png";
   // START TIMER HERE
+  start()
   smallDoor();
   droningThrumOn();
 }
@@ -521,3 +528,31 @@ function science6Success() {
   // STOP TIMER
   stop()
 }
+
+//function to send score to stats table and restart the game
+const scoreHandler = async (event) => {
+  event.preventDefault();
+
+
+
+  //need to determine an if conditional for the end of game/timer
+  if (formattedTime > 0) {
+    const response = await fetch('/api/game', {
+      method: 'POST',
+      body: JSON.stringify({ formattedTime }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      document.location.replace('/game');
+    } else {
+      alert('Failed to save score...');
+    }
+  }
+};
+
+document
+  .querySelector('#play-again')
+  .addEventListener('click', scoreHandler);

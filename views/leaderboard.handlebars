@@ -1,22 +1,18 @@
-<main>
-
-<header>
- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
- <script src = 'leaderboard.js'>
-
- </script>
-<h1 class = "center-block">Leaderboard</h1>
-</header>
-<h2> Do you have what it takes to make it to the top?</h2>
-
-<body>
 <div>
-     
-    <ul class = "List">
-    </ul>
-
-
+<h1 class = "center-block">Leaderboard</h1>
+<h2> Do you have what it takes to make it to the top?</h2>
+<ul>
+{{#each stats as |stat|}}
+<li>
+{{stat.username}}
+{{stat.bestRun}}
+</li>
+{{/each}}
+</p>
+</ul>
+<div>
+  <ul class = "List">
+  </ul>
 </div>
-</body>
-
-</main>
+<script src = 'js/leaderboard.js'></script>
+</div>
