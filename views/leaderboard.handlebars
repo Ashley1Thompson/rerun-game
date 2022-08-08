@@ -1,0 +1,18 @@
+<div>
+<h1 class = "center-block">Leaderboard</h1>
+<h2> Do you have what it takes to make it to the top?</h2>
+<ul>
+{{#each stats as |stat|}}
+<li>
+{{stat.username}}
+{{stat.bestRun}}
+</li>
+{{/each}}
+</p>
+</ul>
+<div>
+  <ul class = "List">
+  </ul>
+</div>
+<script src = 'js/leaderboard.js'></script>
+</div>

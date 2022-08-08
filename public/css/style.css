@@ -1,0 +1,58 @@
+body {
+  background-color: grey;
+}
+
+header {
+  padding: 40px;
+  text-align: center;
+  background-color: black;
+}
+
+header h1 {
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 20px;
+  color: white;
+}
+
+nav {
+  display: flex;
+  background-color: white;
+  color: black;
+  font-size: xx-large;
+}
+
+nav a {
+  font-family: "Prata", serif;
+  font-size: xx-large;
+}
+
+.hide {
+  display: none;
+}
+
+.backgroundImg {
+  margin: 0;
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed ;
+}
+
+p {
+  font-size: large;
+}
+
+@media only screen and (max-width: 600px) {
+  p {
+    font-size: small;
+  }
+
+  img {
+    max-width: 330px;
+    max-height: 330px;
+  }
+
+  nav a {
+    font-size: small;
+  }
+}
