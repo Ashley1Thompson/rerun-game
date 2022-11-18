@@ -6,11 +6,21 @@ const {User} = require('../../models');
 
 //Render login handlebar
 router.get('/', async (req, res) => {
+    // if the user is already logged in, redirect to game route
+    if (req.session.loggedIn) {
+        res.redirect('/game');
+        return;
+    }
     res.render('login');
   });
 
   //Render signup handlebar
 router.get('/signup', async (req, res) => {
+    // if the user is already logged in, redirect to game route
+    if (req.session.loggedIn) {
+        res.redirect('/game');
+        return;
+    }
     res.render('signup');
   });
 
