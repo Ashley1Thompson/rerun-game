@@ -6,26 +6,36 @@ const {User} = require('../../models');
 
 //Render login handlebar
 router.get('/', async (req, res) => {
+    // if the user is already logged in, redirect to game route
+    if (req.session.loggedIn) {
+        res.redirect('/game');
+        return;
+    }
     res.render('login');
   });
 
   //Render signup handlebar
 router.get('/signup', async (req, res) => {
+    // if the user is already logged in, redirect to game route
+    if (req.session.loggedIn) {
+        res.redirect('/game');
+        return;
+    }
     res.render('signup');
   });
 
 
-// get all user login info (not sure if we will need this) ------------------------------------------
-router.get('/users', async (req, res) => {
-    try {
-        const userData = await User.findAll({
-            //space for included models if needed
-        });
-        res.status(200).json(userData)
-    }   catch (err) {
-        res.status(500).json(err);
-    }
-});
+// get all user login info (not sure if we will need this, here for testing route) ------------------------------------------
+// router.get('/users', async (req, res) => {
+//     try {
+//         const userData = await User.findAll({
+//             //space for included models if needed
+//         });
+//         res.status(200).json(userData)
+//     }   catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
 //---------------------------------------------------------------------------------------------------
 
 // CREATE new user (signup)
