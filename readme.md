@@ -1,3 +1,5 @@
+## DEPLOYMENT NOTE: Rerun is no longer deployed due to Heroku deprecating their free tier.
+
 # Rerun  
 ![rerun title](./public/images/title-page.png)
 A Text-based, speed-run adventure game where you must beat the clock - or Rerun!  
