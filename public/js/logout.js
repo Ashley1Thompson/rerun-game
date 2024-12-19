@@ -4,10 +4,10 @@ const logout = async () => {
         headers: { 'Content-Type': 'application/json' },
     });
 
-    if (response,ok) {
+    if (response.ok) {
         document.location.replace('/');
     } else {
-        alert('You have successfully been signed out. Thank you for playing and come back soon!');
+        alert('You are currently not logged in');
     }
 };
 

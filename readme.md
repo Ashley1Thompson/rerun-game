@@ -42,6 +42,14 @@ The biggest challenges we faced were organzing the database and making sure that
 ## Technologies  
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E&style=plastic) ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white&style=plastic) ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white&style=plastic) ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white&style=plastic) ![CSS]( https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white&style=plastic) ![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white&style=plastic) ![Heroku](https://img.shields.io/badge/Heroku-430098?style=for-the-badge&logo=heroku&logoColor=white&style=plastic) ![Handlebars](https://img.shields.io/badge/Handlebars.js-f0772b?style=for-the-badge&logo=handlebarsdotjs&logoColor=black&style=plastic) 
 
+## Cypress e2e Testing
+Follow the steps below to run an end-to-end test on the Rerun gameplay
+1. Run the server
+2. in a new terminal: npm run cypress
+3. in the pop-up, click E2E Testing
+4. choose your browser and run e2e testing
+5. click win_game
+
 ## Contact the Creators on GitHub 
 
 Ayush Umrani  
